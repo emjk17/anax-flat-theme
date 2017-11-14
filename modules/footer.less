@@ -1,0 +1,38 @@
+@import url(modules.less);
+
+
+/*
+* Style footer
+*/
+
+.footer {
+    background-color: @barColor;
+    color: @navTextColor;
+
+    & li {
+        list-style: none;
+    }
+
+    & a {
+        color: @siteLinkColor;
+        text-decoration: none;
+
+        &:hover {
+            color: @barColor;
+        }
+    }
+    &-column-x {
+        padding: 20px;
+    }
+}
+
+/*
+* Responisv design
+**/
+
+@media screen and (max-width: 580px) {
+    .footer-column {
+        width: 100%;
+        border-bottom: 1px solid @navTextColor;
+    }
+}

@@ -1,0 +1,43 @@
+@import url(modules.less);
+
+@barColor: #2a2b2c;
+@navTextColor: #fff;
+
+.inner-wrap-header {
+    background-color: @barColor;
+
+    & a {
+        color: @navTextColor;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+}
+
+@navbarItemColor: @navTextColor;
+@navbarItemHoverBgColor: @navTextColor;
+@navbarItemHoverColor: #000;
+
+.navbar2 {
+    display: inline-block;
+    margin-left: 60px;
+    color: @navTextColor;
+}
+
+@maxButtonFontSize: 2em;
+@maxButtonColor: @navTextColor;
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+/*
+* Responsiv design
+**/
+
+@media screen and (max-width: 600px) {
+    .navbar2 {
+        display: none;
+    }
+}
