@@ -1,4 +1,4 @@
-/** 
+/**
 * Anax Flat theme.
 */
 @import url(modules.less);
@@ -8,14 +8,149 @@
 /** --------------------------------------------------------------
  *  Logo images
  */
+
 .logo-1 {
     position: absolute;
     top: 70px;
     left: -140px;
 }
 
+
+.wrap-all {
+    box-shadow: 3px 3px 10px black;
+    padding: 5px;
+}
+
+/*
+* Style navbar2
+**/
+
+.outer-wrap-header {
+    height: 3.1em;
+    //background-color: #cad7a2;
+    background-color: #2a2b2c;
+}
+
+.site-logo-text a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    //width: 30%;
+}
+
 .site-logo-text-icon {
     img {
         vertical-align: bottom;
+    }
+}
+
+.navbar2 {
+    //position: absolute;
+    width: 40%;
+    float: right;
+}
+
+.flash-wrap img {
+    max-width: 100%;
+}
+
+
+
+/*
+*style for menue buttons
+**/
+
+.rm-default a {
+    //color: #E10277;
+    font-size: 1em;
+    //background-color: #cad7a2;
+}
+
+//@navbarItemColor: #E10277;
+@navbarItemColor: #fff;
+@navbarItemHoverBgColor: #fff;
+//@navbarItemBgColor: #0E1317;
+//Style for hamburger menue
+@maxButtonFontSize: 2em;
+@maxButtonColor: #fff;
+
+//breadcrumb
+.breadcrumb-list a {
+    text-decoration: none;
+    color: #e10277;
+}
+
+//.breadcrumb-list li {
+li {
+    list-style: none;
+}
+
+// main
+.inner-wrap-main a {
+    color: #e10277;
+}
+
+
+
+article p img {
+    float: right;
+    margin: 10px;
+}
+
+/**
+* Style footer
+*/
+
+.inner-wrap-footer {
+    //background-color:  #cad7a2;
+    background-color: #2a2b2c;
+    margin-top: 5px;
+    padding: 8px;
+    color: #fff;
+}
+.inner-wrap-footer a {
+    text-decoration: none;
+    color: #E10277;
+}
+
+.inner-wrap-footer a:hover {
+    color: #fff;
+}
+
+.footer-column-x {
+    overflow: auto;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/**
+* Responsiv header
+*/
+
+@media screen and (max-width: 690px) {
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .article p img {
+        float: none;
+        width: 90%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .footer-column {
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+    .footer-column-2, .footer-column-3 {
+        border-left: 0;
     }
 }
