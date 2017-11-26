@@ -1,0 +1,178 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+@import "grid-helper.less";
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+.hgrid {
+    background-image: url(../img/horisontal-grid-24.png);
+}
+
+.route-typography {
+     background-image: url(../img/horisontal-grid-24.png);
+ }
+
+p {
+    @fontSize: 1.125em;
+    font-size: 1.125em;
+    .fontSize(@fontSize);
+}
+
+.rm-default a {
+    padding: 0;
+}
+
+.wrap-all {
+    padding: 0 !important;
+}
+
+nav div ul a {
+    @height: 48px;
+    .calcMargin(@height);
+    padding-top: @margin !important;
+    padding-bottom: @margin !important;
+    .fontSize(1.25em);
+}
+
+//.flash-wrap {
+.flash-wrap {
+    @height: 130px;
+    height: 130px;
+    .calcMargin(@height);
+    padding-top: @margin / 2 !important;
+    padding-bottom: @margin / 2 !important;
+    .fontSize(1em);
+}
+
+pre {
+    @height: 168px;
+    height: 168px;
+    .calcMargin(@height);
+    margin-bottom: @margin / 2 !important;
+    margin-top: @margin / 2 !important;
+}
+
+div.code {
+    @height: 288px;
+    height: 288px;
+    .calcMargin(@height);
+    margin-bottom: @margin -1px !important;
+    margin-top: @margin /2 -1px !important;
+
+    & + p {
+        @height: 1em;
+        .calcMargin(@height);
+        margin-top: (@margin / 2) - @borderSizeCodeblock !important;
+        margin-bottom: (@margin / 2) - @borderSizeCodeblock !important;
+    }
+}
+
+article p img {
+    margin: 0 !important;
+    @height: 384px;
+    height: 384px;
+    .calcMargin(@height);
+    padding-top: (@margin / 2) !important;
+    padding-bottom: (@margin / 2) !important;
+}
+
+.after-main {
+    @height: 168px;
+    height: 168px;
+    .calcMargin(@height);
+    margin-top: @margin;
+}
+
+.inner-wrap-footer {
+    margin-top: @magicNumber;
+}
+
+
+/**
+ * Magic number for vertical rythm
+ * @magicNumber = @fontSizeBody * @lineHeight
+ */
+
+
+// @magicNumber:   24px; /* 16px - 100%/1.5 */
+//@magicNumber:   22px; /* 16px - 100%/1.375 */
+
+// @fontSizeBody:  16px;
+// @lineHeight:    (unit(@magicNumber) / unit(@fontSizeBody));
+//
+// @fontSizeH1: 2.375em;
+// @fontSizeH2: 1.875em;
+// @fontSizeH3: 1.375em;
+// @fontSizeH4: 1.25em;
+// @fontSizeH5: 1em;
+// @fontSizeH6: 0.875em;
+//
+// @fontSizeCodeInline:  1.25em;
+// @fontSizeCodeBlock:   1.25em;
+// @lineHeightCodeBlock: 1.6;
+//
+// @fontSizeSupSub: 0.75em;
+//
+// @fontSizeSmall: 0.875em;
+//
+// @colorH1BorderBottom: #666;
+// @colorH2BorderBottom: #999;
+// @borderSizeH1: 1px;
+// @borderSizeH2: 1px;
+//
+// @colorTypographyMark: #000;
+// @bgColorTypographyMark:  #ffff99;
+//
+// @colorBlockquoteBorder: #eee;
+// @sizeBlockquoteBorder: 4px;
+//
+// @borderColorCodeInline: #ccc;
+// @bgColorCodeInline:     #eee;
+// @bgColorCodeBlock:      #eee;
+// @colorCodeBlockBorder:  #ccc;
+// @borderSizeCodeblock:   1px;
+//
+// @colorTableHeaderBorder:    #aaa;
+// @sizeTableHeaderBorder:     2px;
+//
+// @bgColorTableStripe:        #fafafa;
+// @colorTableRowBorder:       #ccc;
+//
+// @colorTableRowHover:        #000;
+// @bgColorTableRowHover:      #f6f6f6;
+// @colorTableRowBorderHover:  #666;
+//
+// @fontFamilyCourier:         "Courier New", Courier, monospace;
+// @fontFamilyMonospace:       monospace;
+//
+// // Serif
+// @fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+// @fontFamilyTimes:           Times, 'Times New Roman', serif;
+// @fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+//
+// // Sans-serif
+// @fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyCalibri:         Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+// @fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyArial:           Arial, sans-serif;
+
+
+
+/**
+ * Default font-families
+ */
+
+@fontFamilyHeadings:  @fontFamilyGaramond;
+@fontFamilyBody:      @fontFamilyArial;
+// @fontFamilyCode:      @fontFamilyCourier;

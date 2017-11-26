@@ -1,0 +1,29 @@
+.showGrid(@maxWidth: 1100px, @gridImage) {
+    background: url("@{gridImage}") repeat-y fixed center center;
+    background-size: 100% auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: @maxWidth;
+
+    & .inner-wrap-header {
+        opacity: 0.5;
+    }
+
+    & .inner-wrap-footer {
+        opacity: 0.5;
+    }
+
+// .hgrid(@width: 100%, @typoImage) {
+//     background: url(@maxWidth) repeat-y fixed center center;
+//     background-size: 100% auto;
+//     margin-left: auto;
+//     margin-right: auto;
+//     max-width: @maxWidth;
+
+// }
+
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}

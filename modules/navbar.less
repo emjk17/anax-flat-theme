@@ -9,7 +9,7 @@
     & a {
         color: @navTextColor;
         text-decoration: none;
-        font-size: 1.2em;
+        //font-size: 1.2em;
     }
 }
 
@@ -17,13 +17,20 @@
 @navbarItemHoverBgColor: @navTextColor;
 @navbarItemHoverColor: #000;
 
+
 .navbar2 {
     display: inline-block;
-    margin-left: 60px;
     color: @navTextColor;
+    // background-color: @barColor;
+    //opacity: 0.5;
+
+    & li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
-@maxButtonFontSize: 2em;
+//@maxButtonFontSize: 2em;
 @maxButtonColor: @navTextColor;
 
 .site-logo-text-icon {
